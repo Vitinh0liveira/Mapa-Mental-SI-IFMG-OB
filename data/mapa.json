@@ -1,0 +1,179 @@
+{
+  "curso": {
+    "nome": "Sistemas de Informação",
+    "instituicao": "IFMG - Campus Ouro Branco"
+  },
+  "areas": [
+    {
+      "id": "desenvolvimento-software",
+      "nome": "Desenvolvimento de Software",
+      "disciplinas": [
+        "Introdução à Programação",
+        "Algoritmos e Estrutura de Dados I",
+        "Algoritmos e Estrutura de Dados II",
+        "Programação Orientada a Objetos I",
+        "Programação Orientada a Objetos II",
+        "Projeto e Análise de Algoritmos",
+        "Engenharia de Software I",
+        "Engenharia de Software II",
+        "Qualidade de Software"
+      ],
+      "carreiras": [
+        "Desenvolvedor Back-end",
+        "Engenheiro de Software",
+        "Desenvolvedor Full Stack"
+      ]
+    },
+    {
+      "id": "desenvolvimento-web",
+      "nome": "Desenvolvimento Web",
+      "disciplinas": [
+        "Programação WEB",
+        "Interface Humano Computador"
+      ],
+      "carreiras": [
+        "Desenvolvedor Front-end",
+        "Desenvolvedor Web",
+        "Desenvolvedor Full Stack"
+      ]
+    },
+    {
+      "id": "desenvolvimento-mobile",
+      "nome": "Desenvolvimento Mobile",
+      "disciplinas": [
+        "Programação Orientada a Objetos I",
+        "Programação Orientada a Objetos II",
+        "Programação para Dispositivos Móveis"
+      ],
+      "carreiras": [
+        "Desenvolvedor Mobile",
+        "Desenvolvedor Android",
+        "Desenvolvedor iOS"
+      ]
+    },
+    {
+      "id": "dados-ia",
+      "nome": "Dados e Inteligência Artificial",
+      "disciplinas": [
+        "Probabilidade e Estatística",
+        "Sistemas de Apoio à Decisão",
+        "Inteligência Artificial"
+      ],
+      "carreiras": [
+        "Analista de Dados",
+        "Engenheiro de IA / Aprendizado de Máquina",
+        "Analista de Sistemas"
+      ]
+    },
+    {
+      "id": "banco-dados",
+      "nome": "Banco de Dados",
+      "disciplinas": [
+        "Banco de Dados I"
+      ],
+      "carreiras": [
+        "Administrador de Banco de Dados (DBA)",
+        "Engenheiro de Dados"
+      ]
+    },
+    {
+      "id": "redes-infraestrutura",
+      "nome": "Redes e Infraestrutura",
+      "disciplinas": [
+        "Arquitetura e Organização de Computadores",
+        "Sistemas Operacionais",
+        "Redes de Computadores I",
+        "Sistemas Distribuídos"
+      ],
+      "carreiras": [
+        "Administrador de Redes",
+        "Analista de Infraestrutura / DevOps"
+      ]
+    },
+    {
+      "id": "seguranca",
+      "nome": "Segurança da Informação",
+      "disciplinas": [
+        "Redes de Computadores I",
+        "Sistemas Operacionais",
+        "Sistemas Distribuídos",
+        "Governança e Gestão da Informação"
+      ],
+      "carreiras": [
+        "Consultor em Segurança da Informação",
+        "Analista de Cibersegurança"
+      ]
+    },
+    {
+      "id": "gestao-ti",
+      "nome": "Gestão e Sistemas de Informação",
+      "disciplinas": [
+        "Introdução a Sistemas de Informação",
+        "Princípios da Administração I",
+        "Contabilidade",
+        "Gestão de Projetos",
+        "Empreendedorismo",
+        "Governança e Gestão da Informação"
+      ],
+      "carreiras": [
+        "Analista de Negócios (Product Owner)",
+        "Gerente de Projetos",
+        "Gerente de Sistemas de Informação",
+        "Consultor em Sistemas de Informação"
+      ]
+    },
+    {
+      "id": "ux",
+      "nome": "UX e Interface Humano-Computador",
+      "disciplinas": [
+        "Interface Humano Computador"
+      ],
+      "carreiras": [
+        "Designer de UX/UI",
+        "Web Designer"
+      ]
+    }
+  ],
+  "conexoes": [
+    {
+      "origem": "desenvolvimento-software",
+      "destino": "desenvolvimento-web"
+    },
+    {
+      "origem": "desenvolvimento-software",
+      "destino": "desenvolvimento-mobile"
+    },
+    {
+      "origem": "desenvolvimento-software",
+      "destino": "banco-dados"
+    },
+    {
+      "origem": "ux",
+      "destino": "desenvolvimento-web"
+    },
+    {
+      "origem": "ux",
+      "destino": "desenvolvimento-mobile"
+    },
+    {
+      "origem": "desenvolvimento-web",
+      "destino": "banco-dados"
+    },
+    {
+      "origem": "desenvolvimento-mobile",
+      "destino": "banco-dados"
+    },
+    {
+      "origem": "banco-dados",
+      "destino": "dados-ia"
+    },
+    {
+      "origem": "redes-infraestrutura",
+      "destino": "seguranca"
+    },
+    {
+      "origem": "seguranca",
+      "destino": "gestao-ti"
+    }
+  ]
+}

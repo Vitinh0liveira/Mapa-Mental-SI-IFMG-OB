@@ -1,0 +1,163 @@
+:root {
+    --primary: #027a48;
+    --primary-dark: #054f31;
+    --primary-light: #ecfdf5;
+    --bg-main: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header Estilizado */
+.app-header {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    color: white;
+    padding: 24px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.header-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-logo {
+    height: 52px;
+    width: auto;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.header-text p {
+    margin: 4px 0 0 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.header-text p span {
+    background: rgba(255, 255, 255, 0.18);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.main-container {
+    max-width: 1300px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+#mapa {
+    position: relative;
+    min-height: 1650px;
+    width: 100%;
+}
+
+/* Cards Modernos */
+.area-card {
+    position: absolute;
+    background-color: var(--card-bg);
+    padding: 20px;
+    width: 280px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+    z-index: 2;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.area-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    border-color: #cbd5e1;
+}
+
+.area-title {
+    margin: 0 0 14px 0;
+    color: var(--primary-dark);
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 8px;
+}
+
+.section-label {
+    margin: 12px 0 6px 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.disciplinas-list {
+    margin: 0;
+    padding-left: 18px;
+    color: #334155;
+}
+
+.disciplinas-list li {
+    font-size: 13px;
+    margin-bottom: 4px;
+    line-height: 1.35;
+}
+
+/* Badges/Tags para Carreiras */
+.carreiras-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.carreira-tag {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(2, 122, 72, 0.15);
+    display: inline-block;
+}
+
+/* Linhas de Conexão SVG */
+#conexoes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#conexoes line {
+    stroke: var(--primary);
+    stroke-width: 2.2;
+    stroke-dasharray: 6 3;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
