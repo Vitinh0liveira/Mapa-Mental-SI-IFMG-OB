@@ -21,7 +21,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Header Estilizado */
+/* Header */
 .app-header {
     background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
     color: white;
@@ -63,6 +63,14 @@ body {
     font-weight: 500;
 }
 
+.dica {
+    max-width: 1300px;
+    margin: 16px auto 0;
+    padding: 0 20px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
 .main-container {
     max-width: 1300px;
     margin: 30px auto;
@@ -75,7 +83,7 @@ body {
     width: 100%;
 }
 
-/* Cards Modernos */
+/* Cards */
 .area-card {
     position: absolute;
     background-color: var(--card-bg);
@@ -85,7 +93,8 @@ body {
     border: 1px solid var(--border-color);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
     z-index: 2;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, opacity 0.25s ease;
 }
 
 .area-card:hover {
@@ -122,9 +131,21 @@ body {
     font-size: 13px;
     margin-bottom: 4px;
     line-height: 1.35;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
 }
 
-/* Badges/Tags para Carreiras */
+.disciplinas-list li:hover {
+    background-color: var(--primary-light);
+}
+
+.disciplinas-list li.marcado {
+    background-color: #fef08a;
+    font-weight: 600;
+}
+
+/* Tags de carreira */
 .carreiras-container {
     display: flex;
     flex-wrap: wrap;
@@ -141,9 +162,34 @@ body {
     border-radius: 20px;
     border: 1px solid rgba(2, 122, 72, 0.15);
     display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-/* Linhas de Conexão SVG */
+.carreira-tag:hover {
+    background-color: var(--primary);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+
+.area-card.apagado {
+    opacity: 0.3;
+    filter: grayscale(0.6);
+}
+
+.area-card.ativo {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(2, 122, 72, 0.25), 0 12px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+.area-card.relacionado {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(2, 122, 72, 0.12);
+}
+
+
 #conexoes {
     position: absolute;
     top: 0;
@@ -159,5 +205,90 @@ body {
     stroke-width: 2.2;
     stroke-dasharray: 6 3;
     opacity: 0.5;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.25s ease, stroke-width 0.25s ease;
+}
+
+#conexoes line.destaque {
+    opacity: 1;
+    stroke-width: 3.5;
+}
+
+#conexoes line.apagada {
+    opacity: 0.08;
+}
+
+
+.modal {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    width: 340px;
+    max-width: calc(100vw - 40px);
+    z-index: 100;
+}
+
+.modal.oculto {
+    display: none;
+}
+
+.modal-box {
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 22px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.modal-box h2 {
+    margin: 0 28px 4px 0;
+    color: var(--primary-dark);
+    font-size: 18px;
+}
+
+#modal-sub {
+    margin: 0 0 12px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.modal-box h4 {
+    margin: 16px 0 6px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 4px;
+}
+
+.modal-box h5 {
+    margin: 10px 0 4px;
+    font-size: 13px;
+    color: var(--text-main);
+}
+
+.modal-box ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+#modal-fechar {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    border: none;
+    background: none;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+#modal-fechar:hover {
+    color: var(--text-main);
 }

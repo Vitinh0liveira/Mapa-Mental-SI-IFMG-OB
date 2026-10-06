@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa de Carreiras - Sistemas de Informação IFMG</title>
-    
-    <!-- Fonte Inter para acabamento profissional -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -26,11 +25,12 @@
         </div>
     </header>
 
+    
+
     <main class="main-container">
         <section id="mapa">
             <svg id="conexoes">
                 <defs>
-                    <!-- Marcador de Seta para as Conexões -->
                     <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                         <path d="M 0 0 L 10 5 L 0 10 z" fill="#027a48" opacity="0.8" />
                     </marker>
@@ -39,6 +39,15 @@
             <!-- Áreas renderizadas dinamicamente pelo app.js -->
         </section>
     </main>
+
+    <div id="modal" class="modal oculto">
+        <div class="modal-box">
+            <button id="modal-fechar" aria-label="Fechar">×</button>
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-sub"></p>
+            <div id="modal-conteudo"></div>
+        </div>
+    </div>
 
     <script src="js/app.js"></script>
 
